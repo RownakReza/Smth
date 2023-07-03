@@ -1,0 +1,17 @@
+    #asking for shot
+    order_shot = True
+    print("This is the list of available shots: ")
+
+    for shots in available_shots:
+        print(shots)
+        print()
+    while order_shot:
+        shot = input("Which shot would u like?")
+        if shot in available_shots:
+                final_order.setdefault(coffee, [])
+                final_order[coffee].append(shot)
+                print(f"I have give u a {shot}.")
+                sub_total.append(shot_prices[shot])
+        break
+    if shot not in available_shots:
+            print(f"I am sorry, we currently do not have {shot}.")
